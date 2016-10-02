@@ -2,12 +2,12 @@
 
 var express = require('express');
 var app = express();
-var routers = require("./routes");
+var routers = require('./routes');
 
 var jsonParser = require("body-parser").json;
 
 app.use(jsonParser());
-app.use('/questions', routes);
+app.use('/questions', routers);
 
 var port = process.env.PORT || 3000;
 
